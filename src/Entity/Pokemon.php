@@ -9,7 +9,13 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: PokemonRepository::class)]
-#[ApiResource]
+#[ApiResource(operations: [
+    new Get(),
+    new Post()
+    ]
+)]
+
+
 class Pokemon
 {
     #[ORM\Id]

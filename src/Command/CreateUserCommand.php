@@ -16,9 +16,6 @@ use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 #[AsCommand(name: 'app:create-user')]
 class CreateUserCommand extends Command
 {
-
-   
-
     private EntityManagerInterface $em;
     private UserPasswordHasherInterface $hasher;
 
